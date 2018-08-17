@@ -137,7 +137,7 @@ if (myIngredients[i].name == ingredientInput.value ) {
   var priceAll = myIngredients[i].price_all;
   var  textIngNumber = document.createElement("P");
   var textIngNumbertext = document.createTextNode(priceAll);
-  var opis = document.createTextNode("Cena za opakowanie w zł: ")
+  var opis = document.createTextNode("Cena za szt/kg w zł: ")
 
   var priceOfUsed = Math.round((myIngredients[i].price_all * numberInput.value)*100) / 100;
   var pMath = document.createElement("P");
