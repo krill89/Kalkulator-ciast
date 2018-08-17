@@ -1,3 +1,10 @@
+.container {
+  padding-top: 100px;
+  margin: auto;
+  width: 600px;
+  text-align: center;
+}
+
 .ok {
   width: 50px;
   height:20px;
@@ -19,7 +26,15 @@
 .wynik {
   background-color: lightblue;
 }
-.autocomplete {
-  /*the container must be positioned relative:*/
-  position: relative;
-  display: inline-block;
+
+  .divide {
+    height: 100px;
+  }
+  .logo {
+    text-align: center;
+    width: 400px;;
+  }
+
+  .title {
+    color: orange;
+  }

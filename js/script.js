@@ -90,10 +90,11 @@ for (var i = 0; i < myIngredients.length; i++) {
 }
 
 
-function Ingredient(id, value, name) {
+function Ingredient(id, value, name, fool_price) {
 this.id = id;
 this.value = value;
 this.name = name;
+this.foolprice = fool_price;
 }
 
 var errorMessage = document.getElementById('error');
@@ -117,6 +118,7 @@ document.addEventListener("keyup", function() {
     if(IngredientsNamesArray[i].includes(ingredientInput.value)) {
       console.log(IngredientsNamesArray[i]);
     }
+
 
   }
 });
@@ -160,7 +162,7 @@ if (myIngredients[i].name == ingredientInput.value ) {
   errorMessage.setAttribute("style", "display:none");
   errorMessageNumber.setAttribute("style", "display:none");
 
-  var ingObject = new Ingredient (counter, priceOfUsed, myIngredients[i].name);
+  var ingObject = new Ingredient (counter, priceOfUsed, myIngredients[i].name, myIngredients[i].price_all);
   usedIngredients.push(ingObject);
   counter++
 
@@ -172,14 +174,24 @@ if (myIngredients[i].name == ingredientInput.value ) {
 ButtonCalculate.addEventListener("click", function() {
   var sumDiv
   var fullPrice = 0;
+  var foolPrice = 0;
   for (var i = 0; i < usedIngredients.length; i++) {
     fullPrice = usedIngredients[i].value + fullPrice;
+    foolPrice = usedIngredients[i].foolprice + foolPrice;
   }
   var tab = document.createElement("H3");
-  var tabText = document.createTextNode("Cena ciasta: ");
+  var tabText = document.createTextNode("Cena zużytych składników ciasta: ");
   sumTable.appendChild(tabText);
   var suma = document.createTextNode(fullPrice);
   sumTable.appendChild(suma);
+
+  var tabFoolPrice = document.createElement("p");
+  var tabFoolPriceText = document.createTextNode("Całkowita cena sklepowa składników ciasta: ");
+  tabFoolPrice.appendChild(tabFoolPriceText);
+  var tabFoolPriceNumber = document.createTextNode(foolPrice);
+  tabFoolPrice.appendChild(tabFoolPriceNumber);
+
+  sumTable.appendChild(tabFoolPrice);
+
 });
-console.log(IngredientsNamesArray);
   });

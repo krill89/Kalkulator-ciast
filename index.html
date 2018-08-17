@@ -5,13 +5,17 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+  <div class="container">
+  <div class="logo_container">
+  <img src="img/logo.png" alt="logo" class="logo">
+    <h3 class="title">Kalkulator Ciastowy</h3>
+  </div>
   <div class="autocomplete">
     <p>Wpisz nazwę składnika</p>
-<form autocomplete="off" action="index.html" method="post">
     <input type="text" name="produkt" value="Nazwa" id="ing_input">
     <p id="error">Składnika nie znaleziono w bazie!</p>
 </form>
-    <p>Wpisz ilosc</p>
+    <p>Wpisz ilosc w kg lub sztukach jaka jest ci potrzebna:</p>
     <input type="number" name="amount" value=0 id="number_input">
     <p id="error_number">Podaj ilośc!</p>
     <p>Dodaj składnik do listy</p>
@@ -20,8 +24,12 @@
   </div>
 <div class="przepis" id="recipe">
 </div>
+<div class="divide">
+
+</div>
 <div class="wynik" id="wynik">
 
+</div>
 </div>
 
 
