@@ -1,0 +1,25 @@
+.ok {
+  width: 50px;
+  height:20px;
+}
+#error {
+  color: red;
+  font-size: 10;
+  display: none;
+}
+
+#error_number {
+  color: red;
+  font-size: 10;
+  display: none;
+}
+.przepis {
+  background-color: lightgrey;
+}
+.wynik {
+  background-color: lightblue;
+}
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;

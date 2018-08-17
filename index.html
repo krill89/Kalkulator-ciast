@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <div class="autocomplete">
+    <p>Wpisz nazwę składnika</p>
+<form autocomplete="off" action="index.html" method="post">
+    <input type="text" name="produkt" value="Nazwa" id="ing_input">
+    <p id="error">Składnika nie znaleziono w bazie!</p>
+</form>
+    <p>Wpisz ilosc</p>
+    <input type="number" name="amount" value=0 id="number_input">
+    <p id="error_number">Podaj ilośc!</p>
+    <p>Dodaj składnik do listy</p>
+    <button type="button" name="submit_ing" id="submit">Dodaj skladnik</button>
+    <button type="button" name="submit_calculate" id="calc">Oblicz ciasto</button>
+  </div>
+<div class="przepis" id="recipe">
+</div>
+<div class="wynik" id="wynik">
+
+</div>
+
+
+</body>
+<script src="js/script.js"></script>
+</html>
